@@ -24,6 +24,6 @@ In order to defeat that we can use the Channel#basic_qos channel method with the
 ### How to run 
 1. Open 4 terminal and run consumer.py from 3 of them.
 2. Now run producer.py from 4th terminal and specify multiple dots(.) in argument 
-        python3 producer.py Pune........
+        "python3 producer.py Pune........"
 5. Now you can produce mutiple messages and check consumer is getting them one by one.
 
