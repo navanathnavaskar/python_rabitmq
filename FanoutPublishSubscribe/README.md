@@ -9,11 +9,11 @@ The producer can only send messages to an exchange. One side of the exchange rec
 
 Lets create Exchange:
 
-  channel.exchange_declare(exchange='logs', exchange_type='fanout')
+    channel.exchange_declare(exchange='logs', exchange_type='fanout')
 
 After Creating Exchange, we need to create temporary queues that can be deleted when connections are terminated. We just need live logs so need to make queues permanent.
 
-  result = channel.queue_declare(queue='', exclusive=True)
+    result = channel.queue_declare(queue='', exclusive=True)
 
 Using exclusive=True, we tell RabbitMQ to delete queues after connections are closed.
 
