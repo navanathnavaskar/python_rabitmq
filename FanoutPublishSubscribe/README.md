@@ -17,7 +17,18 @@ After Creating Exchange, we need to create temporary queues that can be deleted 
 
 Using exclusive=True, we tell RabbitMQ to delete queues after connections are closed.
 
+### How to Test App
 
+1. run log_worker.py on 2 terminals.
+    
+    python3 log_worker.py
+    
+2. run log_generator.py from other terminal.
+
+    python3 log_generator.py This is log for test
+    
+On both worker terminals you will see log message as "This is log for test."
+Exchange has passed message to both queues.
 
 
 
